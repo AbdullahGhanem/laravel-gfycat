@@ -1,0 +1,48 @@
+{
+    "name": "ghanem/gfycat",
+    "type": "library",
+    "description": "A package that provides an interface between Laravel and Gfycat API, includes Gifs.",
+    "keywords": ["Laravel", "PHP", "Gfycat", "API", "Gif"],
+    "homepage": "https://github.com/abdullahghanem/gfycat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abdullah ghanem",
+            "email": "3bdullah.ghanem@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },   
+     "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    }, 
+    "autoload": {
+        "psr-4": {
+            "Ghanem\\Gfycat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ghanem\\Gfycat\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ghanem\\Gfycat\\GfycatServiceProvider"
+            ],
+            "aliases": {
+                "Gfycat": "Ghanem\\Gfycat\\Facades\\Gfycat"
+            }
+        }
+    }, 
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    }
+}
