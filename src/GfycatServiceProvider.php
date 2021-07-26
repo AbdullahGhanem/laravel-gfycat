@@ -18,6 +18,8 @@ class GfycatServiceProvider extends ServiceProvider
         $this->app->bind('ghanem-gfycat', function () {
             return new GfycatController;
         });
+
+    }
     
     /**
      * Bootstrap any application services.
