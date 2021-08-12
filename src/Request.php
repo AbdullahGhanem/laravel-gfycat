@@ -28,8 +28,8 @@ class Request
     {
         $endpoint = 'v1/users/' . $user_name . '/gfycats';
         $params = [];
-        isset($count) ? $params['count'] = urlencode($count) : null;
-        isset($cursor) ? $params['cursor'] = urlencode($cursor) : null;
+        isset($count) ? $params['count'] = $count : null;
+        isset($cursor) ? $params['cursor'] = $cursor : null;
         return Request::request($endpoint, $params);
     }
 }
