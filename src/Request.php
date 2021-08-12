@@ -13,7 +13,7 @@ class Request
 
     static public function search($query, $limit, $offset, $rating, $lang)
     {
-        $endpoint = 'v1/' . $type . '/search';
+        $endpoint = 'v1/search';
         $params = [
             'q' => urlencode($query),
             'limit' => (int)$limit,
@@ -24,40 +24,12 @@ class Request
         return Request::request($endpoint, $params);
     }
 
-    static public function trending($limit, $rating)
+    static public function getUserFeeds($user_name, $cursor, $count)
     {
-        $endpoint = 'v1/' . $type . '/trending';
-        $params = [
-            'limit' => (int)$limit
-        ];
-        isset($rating) ? $params['rating'] = urlencode($rating) : null;
+        $endpoint = 'v1/users/' . $user_name . '/gfycats';
+        $params = [];
+        isset($count) ? $params['count'] = urlencode($count) : null;
+        isset($cursor) ? $params['cursor'] = urlencode($cursor) : null;
         return Request::request($endpoint, $params);
-    }
-
-    static public function translate($query, $rating, $lang)
-    {
-        $endpoint = 'v1/' . $type . '/translate';
-        $params = [
-            's' => urlencode($query)
-        ];
-        isset($rating) ? $params['rating'] = urlencode($rating) : null;
-        isset($lang) ? $params['lang'] = urlencode($lang) : null;
-        return Request::request($endpoint, $params);
-    }
-
-    static public function random($query, $rating)
-    {
-        $endpoint = 'v1/' . $type . '/random';
-        $params = [
-            'tag' => urlencode($query)
-        ];
-        isset($rating) ? $params['rating'] = urlencode($rating) : null;
-        return Request::request($endpoint, $params);
-    }
-
-    static public function getUserFeeds($user_name)
-    {
-        $endpoint = 'v1/users/' . $user_name. '/gfycats';
-        return Request::request($endpoint);
     }
 }
