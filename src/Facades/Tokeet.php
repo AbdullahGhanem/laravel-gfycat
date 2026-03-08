@@ -1,13 +1,13 @@
 <?php
 
-namespace Ghanem\Gfycat\Facades;
+namespace Ewa\Tokeet\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Gfycat extends Facade
+class Tokeet extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'ghanem-gfycat';
+        return 'ewa-tokeet';
     }
 }
