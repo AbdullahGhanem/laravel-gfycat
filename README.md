@@ -1,8 +1,6 @@
 # Laravel Tokeet
 
-[![Latest Stable Version](https://poser.pugx.org/ewa/tokeet/v/stable)](https://packagist.org/packages/ewa/tokeet)
-[![Total Downloads](https://poser.pugx.org/ewa/tokeet/downloads)](https://packagist.org/packages/ewa/tokeet)
-[![License](https://poser.pugx.org/ewa/tokeet/license)](https://packagist.org/packages/ewa/tokeet)
+[![Latest Stable Version](https://poser.pugx.org/ewa/tokeet/v/stable.svg)](https://packagist.org/packages/ewa/tokeet) [![License](https://poser.pugx.org/ewa/tokeet/license.svg)](https://packagist.org/packages/ewa/tokeet) [![Total Downloads](https://poser.pugx.org/ewa/tokeet/downloads.svg)](https://packagist.org/packages/ewa/tokeet)
 
 A Laravel package that provides a clean interface to the [Tokeet Property Management API](https://www.tokeet.com/). Manage rentals, inquiries, guests, channels, rates, events, invoices, and messages directly from your Laravel application.
 
